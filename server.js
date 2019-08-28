@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
-const users = require("./routes/api/users");
+const users = require("./routes/users");
 
 const app = express();
 
 //Bodyparser middleware
-app.user(
+app.use(
     bodyParser.urlencoded({
         extended: false
     })
